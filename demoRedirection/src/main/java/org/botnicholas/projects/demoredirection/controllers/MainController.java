@@ -10,11 +10,11 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(allowedHeaders = {"*"}, origins = {"*"})
+@CrossOrigin("*")
 public class MainController {
     @GetMapping("/redirect-me")
     public RedirectView redirectMe() {
-        return new RedirectView("http://localhost:8080/give-me-five");
+        return new RedirectView("http://93.116.234.164:8080/give-me-five");
     }
 
     @GetMapping("/give-me-five")

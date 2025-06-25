@@ -14,8 +14,9 @@ export class App {
   constructor(private http:HttpClient) {}
 
   giveFive() {
-    this.http.get("http://localhost:8080/redirect-me", {observe: 'response'}).subscribe(res => {
+    this.http.get("http://93.116.234.164:8080/redirect-me", {observe: 'response'}).subscribe(res => {
       console.log(res);
+      this.title = JSON.stringify(res.body);
     })
   }
 }
